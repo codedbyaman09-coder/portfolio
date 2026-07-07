@@ -1,6 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { FaBirthdayCake, FaFlag, FaCog, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import { useSection } from "./SectionContext";
 import ResumeSection from "./ResumeSection";
@@ -37,9 +38,9 @@ export default function HeroSection() {
         </h1>
 
         {/* Subtitle */}
-        <p className="font-space-mono text-white text-[12px] md:text-[14px] tracking-[0.15em] md:tracking-[0.2em] font-bold uppercase mb-8 drop-shadow-md text-left max-w-[800px] leading-relaxed">
-          I'm a fresher full stack developer and UI/UX designer <br /> passionate about building modern web experiences.
-        </p>
+        <h2 className="font-space-mono text-white text-[12px] md:text-[14px] tracking-[0.15em] md:tracking-[0.2em] font-bold uppercase mb-8 drop-shadow-md text-left max-w-[800px] leading-relaxed">
+          I'm a fresher <span className="text-[var(--color-brand-yellow)]">full stack developer</span> and UI/UX designer <br /> passionate about building modern web experiences.
+        </h2>
 
         {/* Button */}
         <button
@@ -67,10 +68,12 @@ export default function HeroSection() {
             {/* Left: Image */}
             <div className="w-full lg:w-5/12 flex-shrink-0">
               <div className="relative w-full aspect-[4/5] border-[8px] md:border-[12px] border-gray-100 dark:border-[#333333] shadow-lg dark:shadow-2xl">
-                <img
+                <Image
                   src="/images/aman.jpeg"
-                  alt="Aman Kulariya"
-                  className="w-full h-full object-cover"
+                  alt="Aman Kulariya - Full Stack Developer and React Expert"
+                  fill
+                  priority
+                  className="object-cover"
                 />
               </div>
             </div>

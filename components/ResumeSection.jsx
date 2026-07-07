@@ -55,46 +55,38 @@ export default function ResumeSection() {
   const educationData = [
     {
       id: 1,
-      role: "BCA (In Progress) - Vivekananda Global University",
-      date: "2024-2027",
+      role: "Bachelor of Computer Applications (BCA)",
+      date: "2024 - 2027",
       company: "Vivekananda Global University",
-      desc: "Currently pursuing Bachelor of Computer Applications at Vivekananda Global University,building strong knowledge in programming,data structures, software development, and actively participating in hackathons and coding challenges."
+      desc: "Currently pursuing a BCA degree, building a strong foundation in data structures, algorithms, and full-stack software development. Actively participating in hackathons and coding challenges."
     },
-
     {
       id: 2,
-      role: `Govt. Seth Bherudan Chopra Sr. Sec. School, Bikaner(2022)`,
-      date: "2010 - 2012",
-      company: "IT College",
-      desc: "12th Class with  from Govt. Seth Bherudan Chopra Sr. Sec. School, Bikaner (2022)."
+      role: "Full Stack Web Developer Training",
+      date: "2022 - Present",
+      company: "Self-Taught & Certifications",
+      desc: "Developed expertise in modern web technologies including the MERN Stack (MongoDB, Express.js, React, Node.js), Next.js, and Tailwind CSS. Focused on building responsive, scalable UI/UX designs."
     },
     {
       id: 3,
-      role: "O Level - NIELIT",
+      role: "O Level Certification",
       date: "2018 - 2019",
-      company: "Programming Fundamentals, Web Technologies, Database Concepts",
-      desc: "Completed O Level certification from NIELIT, gaining foundational knowledge in programming, web technologies, and database concepts."
+      company: "NIELIT",
+      desc: "Completed foundational IT certification covering programming fundamentals, web technologies, and database architecture concepts."
     },
     {
       id: 4,
-      role: "Tally ERP",
-      date: "2022",
-      company: "Accounting, GST, Inventory & Financial Reporting",
-      desc: "Completed Tally ERP certification, mastering accounting principles, GST compliance, inventory management, and financial reporting."
+      role: "Higher Secondary Education",
+      date: "2020 - 2022",
+      company: "Govt. Seth Bherudan Chopra Sr. Sec. School",
+      desc: "Completed 12th grade with a focus on core academic subjects, developing analytical and problem-solving skills."
     },
     {
       id: 5,
-      role: "RSCIT",
+      role: "Tally ERP & Accounting",
       date: "2022",
-      company: "Rajasthan State Certificate in Information Technology",
-      desc: "Completed RSCIT certification, gaining essential computer skills including Microsoft Office, internet navigation, and digital literacy."
-    },
-    {
-      id: 7,
-      role: "full stack developer ",
-      date: "2022",
-      company: "MERN Stack, Laravel, Nest.js, UI/UX",
-      desc: "Skilled in building modern, responsive, and user-friendly web applications using React, Next.js, Laravel, Node.js, and database technologies."
+      company: "Financial Reporting Certification",
+      desc: "Mastered accounting principles, GST compliance, inventory management, and financial reporting software."
     }
   ];
 

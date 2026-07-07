@@ -29,7 +29,14 @@ export default function SkillsSection() {
               {skill.name}
             </h3>
 
-            <div className="relative w-full h-[4px] bg-gray-300 dark:bg-[#333333] mt-5 rounded-full">
+            <div 
+              className="relative w-full h-[4px] bg-gray-300 dark:bg-[#333333] mt-5 rounded-full"
+              role="progressbar"
+              aria-label={`${skill.name} proficiency`}
+              aria-valuenow={skill.percentage}
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
               {/* Tooltip */}
               <div
                 className="absolute -top-[36px] -translate-x-1/2 bg-[var(--color-brand-yellow)] text-white font-space-mono text-[13px] font-bold px-[8px] py-[3px] rounded-[3px] transition-colors duration-300 flex justify-center items-center shadow-md"

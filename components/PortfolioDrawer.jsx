@@ -1,6 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useSection } from "./SectionContext";
 
@@ -41,8 +42,8 @@ export default function PortfolioDrawer() {
         {/* Projects Grid */}
         <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-16">
           {projects.map(project => (
-            <a
-              key={project.id}
+            <article key={project.id} className="w-full flex">
+              <a
               href={project.github}
               target="_blank"
               rel="noreferrer"
@@ -51,10 +52,11 @@ export default function PortfolioDrawer() {
               {/* Image */}
               <div className="w-full h-[200px] md:h-[300px] bg-gray-100 dark:bg-[#1a1a1a] relative flex justify-center items-center overflow-hidden border-b-[4px] border-[var(--color-brand-yellow)] transition-colors duration-300">
                 {project.image ? (
-                  <img
+                  <Image
                     src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    alt={`${project.title} - Full Stack Developer Portfolio Project`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 ) : (
                   <h3 className="font-playfair text-4xl text-[#444] font-bold group-hover:scale-110 transition-transform duration-500 text-center px-4">
@@ -94,6 +96,7 @@ export default function PortfolioDrawer() {
                 </div>
               </div>
             </a>
+            </article>
           ))}
         </div>
       </div>

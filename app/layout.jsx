@@ -19,8 +19,34 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata = {
-  title: "Aman KULARIYA",
-  description: "Personal portfolio of Aman Kulariya, Freelance UI/UX Designer and Developer based in India.",
+  title: "Aman Kulariya | Full Stack Developer & MERN Stack Expert",
+  description: "Portfolio of Aman Kulariya, a Full Stack Developer specializing in the MERN stack (MongoDB, Express, React, Node.js), and UI/UX design.",
+  keywords: ["Aman Kulariya", "Aman Kulariya Portfolio", "Full Stack Developer", "MERN Stack Developer", "React Developer", "UI/UX Designer"],
+  alternates: {
+    canonical: "https://amankulariya-portfolio.vercel.app",
+  },
+  openGraph: {
+    title: "Aman Kulariya | Full Stack Developer",
+    description: "Portfolio of Aman Kulariya, specializing in the MERN stack and UI/UX design.",
+    url: "https://amankulariya-portfolio.vercel.app",
+    siteName: "Aman Kulariya Portfolio",
+    images: [
+      {
+        url: "https://amankulariya-portfolio.vercel.app/images/aman.jpeg",
+        width: 800,
+        height: 600,
+        alt: "Aman Kulariya - Full Stack Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aman Kulariya | Full Stack Developer",
+    description: "Portfolio of Aman Kulariya, specializing in the MERN stack.",
+    images: ["https://amankulariya-portfolio.vercel.app/images/aman.jpeg"],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -31,6 +57,48 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col m-0 p-0 overflow-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://amankulariya-portfolio.vercel.app/#person",
+                  "name": "Aman Kulariya",
+                  "url": "https://amankulariya-portfolio.vercel.app",
+                  "image": "https://amankulariya-portfolio.vercel.app/images/aman.jpeg",
+                  "jobTitle": "Full Stack Developer",
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "Freelance"
+                  },
+                  "description": "Fresher Full Stack / MERN Stack Developer and UI/UX Designer.",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Bikaner",
+                    "addressRegion": "Rajasthan",
+                    "postalCode": "334001",
+                    "addressCountry": "IN"
+                  },
+                  "sameAs": [
+                    "https://github.com/codedbyaman09-coder"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://amankulariya-portfolio.vercel.app/#website",
+                  "url": "https://amankulariya-portfolio.vercel.app",
+                  "name": "Aman Kulariya Portfolio",
+                  "publisher": {
+                    "@id": "https://amankulariya-portfolio.vercel.app/#person"
+                  }
+                }
+              ]
+            })
+          }}
+        />
         <SectionProvider>
           {children}
           <MenuButton />
